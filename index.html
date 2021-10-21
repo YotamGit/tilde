@@ -329,7 +329,17 @@
   * {
     box-sizing: border-box;
   }
-
+  #background {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -999;
+  }
   html {
     font-family: var(--font-family);
     font-size: var(--base-font-size);
@@ -559,6 +569,7 @@
   }
 </style>
 
+<img id="background" src="./photos/fallout_1.jpg">
 <div class="center"><time class="clock" id="clock"></time></div>
 <form
   autocomplete="off"
