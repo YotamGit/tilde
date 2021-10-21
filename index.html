@@ -18,7 +18,7 @@
     clockShowAmPm: true,
 
     // Show seconds on the clock. A monospaced font is recommended for this.
-    clockShowSeconds: false,
+    clockShowSeconds: true,
 
     // Show a twenty-four-hour clock instead of a twelve-hour clock.
     clockTwentyFourHour: true,
@@ -650,9 +650,13 @@
 
     _setTime() {
       const date = new Date();
+      const day = $.pad(date.getDate());
+      const weekday = new Intl.DateTimeFormat('en-GB', { weekday: 'long' }).format(date);
+      const month = new Intl.DateTimeFormat('en-GB', { month: 'short' }).format(date);
+      const year = new Intl.DateTimeFormat('en-GB', { year: 'numeric' }).format(date)
       let hours = $.pad(date.getHours());
       let amPm = '';
-
+      
       if (!this._twentyFourHour) {
         hours = date.getHours();
         if (hours > 12) hours -= 12;
@@ -665,7 +669,14 @@
         ? this._delimiter + $.pad(date.getSeconds())
         : '';
 
-      this._el.innerHTML = hours + minutes + seconds + amPm;
+      //original clock
+      //this._el.innerHTML = hours + minutes + seconds + amPm;
+
+      //new clock
+      //TODO
+      // - move date to a different element
+      // - g
+      this._el.innerHTML = (new Intl.DateTimeFormat('en-GB', { timeStyle: 'medium' }).format(date)) + '<br>' + (day + ' ' + month + ' ' + year);
       this._el.setAttribute('datetime', date.toTimeString());
     }
 
