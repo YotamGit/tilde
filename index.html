@@ -427,6 +427,9 @@
     font-family: var(--clock-font-family);
     font-size: var(--clock-font-size);
     cursor: pointer;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
   }
 
   body.form .clock {
@@ -547,7 +550,7 @@
   }
 
   .search-form {
-    background: var(--search-background);
+    
     color: var(--search-foreground);
     visibility: hidden;
   }
@@ -557,7 +560,13 @@
   }
 
   .search-form-content {
-    width: 100%;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/opacity/see-through */
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    margin-top: 30.5%;
   }
 
   .search-input {
@@ -566,7 +575,6 @@
     font-size: var(--search-input-font-size);
     font-weight: var(--font-weight-black);
     text-align: var(--search-input-text-align);
-    text-transform: uppercase;
   }
 
   .search-suggestions {
@@ -581,6 +589,8 @@
   body.suggestions .search-suggestions {
     display: flex;
     margin-top: 2rem;
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .search-suggestion {
@@ -1575,7 +1585,8 @@
 
     _setColorsFromQuery(query) {
       const color = this._parseQuery(query).color;
-      this._formEl.style.background = color || '';
+      //this changes the background color when a key is recognized.
+      //this._formEl.style.background = color || '';
     }
 
     _submitForm(e) {
