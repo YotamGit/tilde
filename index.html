@@ -274,7 +274,7 @@
 
     --clock-font-color: rgb(221, 221, 221);
     --clock-font-family: 'Roboto Condensed', sans-serif;
-    --search-input-font-family:'Roboto Condensed', sans-serif;
+    --search-input-font-family: 'Roboto Condensed', sans-serif;
     /*--clock-font-family: var(--font-family);*/
 
     --search-background: #000;
@@ -294,7 +294,7 @@
     --base-font-size: 16px;
     --clock-font-size: 5vw;
     --search-input-font-size: 2rem;
-    
+
 
     --font-weight-black: 900;
     --font-weight-bold: 700;
@@ -854,50 +854,33 @@
   }
 
   //preload image in browser
-  function preloadImages(array, waitForOtherResources, timeout) {
-    var loaded = false, list = preloadImages.list, imgs = array.slice(0), t = timeout || 15 * 1000, timer;
+  function preloadImages(array) {
     if (!preloadImages.list) {
       preloadImages.list = [];
     }
-    if (!waitForOtherResources || document.readyState === 'complete') {
-      loadNow();
-    } else {
-      window.addEventListener("load", function () {
-        clearTimeout(timer);
-        loadNow();
-      });
-      // in case window.addEventListener doesn't get called (sometimes some resource gets stuck)
-      // then preload the images anyway after some timeout time
-      timer = setTimeout(loadNow, t);
-    }
-
-    function loadNow() {
-      if (!loaded) {
-        loaded = true;
-        for (var i = 0; i < imgs.length; i++) {
-          var img = new Image();
-          img.onload = img.onerror = img.onabort = function () {
-            var index = list.indexOf(this);
-            if (index !== -1) {
-              // remove image from the array once it's loaded
-              // for memory consumption reasons
-              list.splice(index, 1);
-            }
-          }
-          list.push(img);
-          img.src = imgs[i];
+    var list = preloadImages.list;
+    for (var i = 0; i < array.length; i++) {
+      var img = new Image();
+      img.onload = function () {
+        var index = list.indexOf(this);
+        if (index !== -1) {
+          // remove image from the array once it's loaded
+          // for memory consumption reasons
+          list.splice(index, 1);
         }
       }
+      list.push(img);
+      img.src = array[i];
     }
   }
 
   //cache the backgrounds in the browser
   const backgroundPaths = [];
-  for(var imgId=1; imgId<CONFIG.backgroundCount+1;imgId++) {
-    backgroundPaths.push("./photos/" +imgId + ".jpg");
+  for (var imgId = 1; imgId < CONFIG.backgroundCount + 1; imgId++) {
+    backgroundPaths.push("./photos/" + imgId + ".jpg");
   }
   console.log(backgroundPaths);
-  preloadImages(backgroundPaths, true);
+  preloadImages(backgroundPaths);
 </script>
 
 <!--main script section-->
@@ -999,7 +982,7 @@
       //TODO
       // - move date to a different element
       // - g
-      this._el.innerHTML = hours + minutes + seconds + amPm + '<br>' + (day + ' ' + month + ' ' + year);
+      this._el.innerHTML = (day + ' ' + month + ' ' + year) + '<br>' + (hours + minutes + seconds + amPm);
       this._el.setAttribute('datetime', date.toTimeString());
     }
 
