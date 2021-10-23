@@ -262,6 +262,8 @@
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300');
+
   :root {
     --base-background: #000;
     --base-foreground: #fff;
@@ -269,6 +271,10 @@
     --help-background: #000;
     --help-foreground: #fff;
     --help-command-key-foreground: #000;
+
+    --clock-font-color: rgb(221, 221, 221);
+    --clock-font-family: 'Roboto Condensed', sans-serif;
+    /*--clock-font-family: var(--font-family);*/
 
     --search-background: #000;
     --search-foreground: #fff;
@@ -283,10 +289,9 @@
     --font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica,
       Ubuntu, Roboto, Noto, Segoe UI, Arial, sans-serif;
 
-    --clock-font-family: var(--font-family);
 
     --base-font-size: 16px;
-    --clock-font-size: 4rem;
+    --clock-font-size: 5vw;
     --search-input-font-size: 2rem;
 
     --font-weight-black: 900;
@@ -305,13 +310,13 @@
 
   @media (min-width: 400px) {
     :root {
-      --clock-font-size: 6rem;
+      --clock-font-size: 5vw;
     }
   }
 
   @media (min-width: 650px) {
     :root {
-      --clock-font-size: 8rem;
+      --clock-font-size: 5vw;
       --help-category-columns: 2;
       --search-input-text-align: center;
       --search-suggestions-align-items: center;
@@ -426,14 +431,15 @@
     display: block;
     font-family: var(--clock-font-family);
     font-size: var(--clock-font-size);
+    color: var(--clock-font-color);
     cursor: pointer;
-    position: absolute;
     margin: 0 auto;
-    left: 50%;
+    /* 1 pixel black shadow to left, top, right and bottom */
+    text-shadow: 0px 0px 11px black;
   }
 
   body.form .clock {
-    visibility: hidden;
+    /*visibility: hidden;*/
   }
 
   .help {
@@ -550,7 +556,6 @@
   }
 
   .search-form {
-    
     color: var(--search-foreground);
     visibility: hidden;
   }
