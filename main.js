@@ -56,13 +56,15 @@ const $ = {
 
 class Clock {
 	constructor(options) {
-		this._el = $.el('#clock');
+		this._clockTime = $.el('#clock-time');
+		this._clockDate = $.el('#clock-date');
 		this._amPm = options.amPm;
 		this._delimiter = options.delimiter;
 		this._showSeconds = options.showSeconds;
 		this._twentyFourHour = options.twentyFourHour;
 		this._setTime = this._setTime.bind(this);
-		this._el.addEventListener('click', options.onClick);
+		this._clockTime.addEventListener('click', options.onClick);
+		this._clockDate.addEventListener('click', options.onClick);
 		this._start();
 	}
 
@@ -91,11 +93,11 @@ class Clock {
 		//(new Intl.DateTimeFormat('en-GB', { timeStyle: 'medium' }).format(date)) this._el.innerHTML = hours + minutes + seconds + amPm;
 
 		//new clock
-		//TODO
-		// - move date to a different element
-		// - g
-		this._el.innerHTML = (day + ' ' + month + ' ' + year) + '<br>' + (hours + minutes + seconds + amPm);
-		this._el.setAttribute('datetime', date.toTimeString());
+		this._clockDate.innerHTML = (day + ' ' + month + ' ' + year);
+		this._clockDate.setAttribute('datetime', date.toTimeString());
+
+		this._clockTime.innerHTML = (hours + minutes + seconds + amPm);
+		this._clockTime.setAttribute('datetime', date.toTimeString());
 	}
 
 	_start() {

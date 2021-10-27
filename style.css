@@ -145,7 +145,10 @@ a, a:focus {
 	height: 100%;
 }
 
-.clock {
+.clock-container{
+	flex-direction: column;
+}
+.clock-time, .clock-date {
 	display: block;
 	font-family: var(--clock-font-family);
 	font-size: var(--clock-font-size);
