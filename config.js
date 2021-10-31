@@ -94,6 +94,13 @@ const CONFIG = {
 			url: 'https://www.allkeyshop.com/blog/',
 		},
 		{
+			category: 'Gaming',
+			hues: ['4', '24'],
+			key: 'afkc',
+			name: 'Afk Arena Codes',
+			url: 'https://cdkey.lilith.com/afk-global',
+		},
+		{
 			category: 'Anime',
 			hues: ['167', '187'],
 			key: 'mal',
@@ -206,6 +213,14 @@ const CONFIG = {
 			url: 'https://www.twitch.tv/directory/following',
 		},
 		{
+			category: 'Watch',
+			hues: ['5', '355'],
+			key: 'imdb',
+			name: 'Imdb',
+			search: '/find?q={}&ref_=nv_sr_sm',
+			url: 'https://www.imdb.com/',
+		},
+		{
 			category: 'Social',
 			hues: ['201', '221'],
 			key: 'wa',
@@ -247,7 +262,7 @@ const CONFIG = {
 	suggestionDefaults: {
 		hi: ['hi/db/char/unreleased-and-upcoming-characters/'],
 		mal: ['mal/topanime.php', 'mal/anime/season', 'mal/recommendations.php?s=recentrecs&t=anime'],
-		git: ['git/SuperCuber/playman', 'git/YotamGit/tilde'],
+		git: ['git/YotamGit/tilde', 'git/SuperCuber/playman'],
 		pm: ['pm/play', 'pm/new', 'pm/tags', 'pm/edit_many'],
 		rbg: ['rbg/torrents.php?category=movies', 'rbg/torrents.php?category=2;18;41;49', 'rbg/torrents.php?category=2;27;28;29;30;31;32;40;53'],
 		r: ['r/r/superstonk', 'r/r/startpages'],
