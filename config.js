@@ -139,6 +139,12 @@ const CONFIG = {
 			url: 'https://playman.amitgold.com/',
 		},
 		{
+			category: 'Security',
+			key: 'bw',
+			name: 'Bitwarden',
+			url: 'https://vault.bitwarden.com/#/',
+		},
+		{
 			category: 'Torrents',
 			hues: ['166', '146'],
 			key: 'nya',
@@ -233,6 +239,14 @@ const CONFIG = {
 			key: 'ud',
 			name: 'Udemy',
 			url: 'https://www.udemy.com/',
+		},
+		{
+			category: 'Learn',
+			hues: ['201', '221'],
+			key: 'tp',
+			name: 'Udemy',
+			search: '/search/{}',
+			url: 'https://www.tutorialspoint.com',
 		},
 	],
 
