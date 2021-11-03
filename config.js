@@ -244,7 +244,7 @@ const CONFIG = {
 			category: 'Learn',
 			hues: ['201', '221'],
 			key: 'tp',
-			name: 'Udemy',
+			name: 'Tutorialspoint',
 			search: '/search/{}',
 			url: 'https://www.tutorialspoint.com',
 		},
