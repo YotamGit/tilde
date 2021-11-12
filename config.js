@@ -80,7 +80,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Gaming',
-			hues: ['4', '24'],
+			color: 'rgb(117,214,239)',
 			key: 'gim',
 			name: 'Genshin Impact Map',
 			url: 'https://webstatic-sea.mihoyo.com/?lang=en-us#/map/2',
@@ -102,7 +102,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Anime',
-			hues: ['167', '187'],
+			color: 'rgb(46,81,162)',
 			key: 'mal',
 			name: 'MyAnimeList',
 			search: '/search/all?q={}&cat=all',
@@ -110,7 +110,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Anime',
-			hues: ['36', '26'],
+			color: 'rgb(255,193,25)',
 			key: 'go',
 			name: 'Gogoanime',
 			search: '/search.html?keyword={}',
@@ -118,7 +118,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Miscellaneous',
-			hues: ['214', '234'],
+			color: 'rgb(205,217,229)',
 			key: 'git',
 			name: 'GitHub',
 			search: '/search?q={}',
@@ -126,13 +126,14 @@ const CONFIG = {
 		},
 		{
 			category: 'Miscellaneous',
-			hues: ['266', '286'],
+			color: 'rgb(53, 55, 83)',
 			key: 'st',
 			name: 'Speedtest',
 			url: 'https://www.speedtest.net/',
 		},
 		{
 			category: 'Miscellaneous',
+			color: 'rgb(114,137,218)',
 			key: 'pm',
 			name: 'Playman',
 			search: '/?query={}',
@@ -140,6 +141,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Security',
+			color: 'rgb(23,93,220)',
 			key: 'bw',
 			name: 'Bitwarden',
 			url: 'https://vault.bitwarden.com/#/',
@@ -153,14 +155,14 @@ const CONFIG = {
 		},
 		{
 			category: 'Torrents',
-			hues: ['5', '345'],
+			color: 'rgb(223,98,56)',
 			key: '1337x',
 			name: '1337x',
 			url: 'https://www.1377x.to/',
 		},
 		{
 			category: 'Torrents',
-			hues: ['217', '237'],
+			color: 'rgb(211,185,165)',
 			key: 'pb',
 			name: 'ThePirateBay',
 			url: 'https://www.pirateproxy-bay.com/',
@@ -174,7 +176,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Media',
-			hues: ['254', '234'],
+			color: 'rgb(255,69,0)',
 			key: 'r',
 			name: 'Reddit',
 			search: '/search?q={}',
@@ -220,7 +222,7 @@ const CONFIG = {
 		},
 		{
 			category: 'Watch',
-			hues: ['5', '355'],
+			color: 'rgb(245,197,24)',
 			key: 'imdb',
 			name: 'Imdb',
 			search: '/find?q={}&ref_=nv_sr_sm',
@@ -228,14 +230,14 @@ const CONFIG = {
 		},
 		{
 			category: 'Social',
-			hues: ['201', '221'],
+			color: 'rgb(12,194,67)',
 			key: 'wa',
 			name: 'Whatsapp',
 			url: 'https://web.whatsapp.com/',
 		},
 		{
 			category: 'Learn',
-			hues: ['201', '221'],
+			color: 'rgb(86,36,208)',
 			key: 'ud',
 			name: 'Udemy',
 			url: 'https://www.udemy.com/',
