@@ -178,6 +178,7 @@ body.form .help {
 	visibility: hidden;
 }
 
+::-webkit-scrollbar { display: none; }
 .categories {
 	padding: 2rem 0;
 	columns: var(--help-category-columns);
@@ -198,6 +199,7 @@ body.form .help {
     max-width: 60vw;
     max-height: 100vh;
     overflow-y: scroll;
+	scrollbar-width: none;
     padding: 20px;
     text-align: center;
     display: flex;
