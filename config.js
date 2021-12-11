@@ -140,6 +140,27 @@ const CONFIG = {
       url: 'https://www.imdb.com/',
     },
     {
+      category: 'VPS/DNS',
+      color: 'rgb(199,70,52)',
+      key: 'oc',
+      name: 'Oracle Cloud',
+      url: 'https://www.oracle.com/index.html',
+    },
+    {
+      category: 'VPS/DNS',
+      color: 'rgb(0,157,220)',
+      key: 'dd',
+      name: 'Dynadot',
+      url: 'https://www.dynadot.com/',
+    },
+    {
+      category: 'VPS/DNS',
+      color: 'rgb(255,110,40)',
+      key: 'cdns',
+      name: 'ClouDNS',
+      url: 'https://www.cloudns.net/',
+    },
+    {
       category: 'Torrents',
       hues: ['166', '146'],
       key: 'nya',
@@ -249,7 +270,7 @@ const CONFIG = {
   queryInstantRedirect: false,
 
   // Open triggered queries in a new tab.
-  queryNewTab: true,
+  queryNewTab: false,
 
   // The delimiter between a command key and a path. For example, you'd type
   // "r/r/unixporn" to go to "https://reddit.com/r/unixporn".
