@@ -48,6 +48,13 @@ const CONFIG = {
     },
     {
       category: 'Google',
+      hues: ['217', '197'],
+      key: 'hm',
+      name: 'Huji Mail',
+      url: 'http://mail.huji.ac.il',
+    },
+    {
+      category: 'Google',
       hues: ['136', '156'],
       key: 'd',
       name: 'Drive',
