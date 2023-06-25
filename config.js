@@ -32,6 +32,7 @@ const CONFIG = {
   // lightness and alpha for each generated color. "color", if defined, will
   // be applied as-is to the command's "background" CSS property.
   commands: [
+    //#region Google
     {
       key: '*',
       name: 'Google',
@@ -70,44 +71,8 @@ const CONFIG = {
       search: '/calendar/u/0/r/search?q={}',
       url: 'https://calendar.google.com/calendar/u/0/r',
     },
-    {
-      category: 'Gaming',
-      hues: ['4', '24'],
-      key: 'hi',
-      name: 'Honey Impact',
-      url: 'https://genshin.honeyhunterworld.com/?lang=EN',
-    },
-    {
-      category: 'Gaming',
-      color: 'rgb(117,214,239)',
-      key: 'gim',
-      name: 'Genshin Impact Map',
-      url: 'https://webstatic-sea.mihoyo.com/?lang=en-us#/map/2',
-    },
-    {
-      category: 'Gaming',
-      hues: ['4', '24'],
-      key: 'aks',
-      name: 'AllKeyShop',
-      search: '/catalogue/search-{}/',
-      url: 'https://www.allkeyshop.com/blog/',
-    },
-    {
-      category: 'Anime',
-      color: 'rgb(46,81,162)',
-      key: 'mal',
-      name: 'MyAnimeList',
-      search: '/search/all?q={}&cat=all',
-      url: 'https://myanimelist.net/',
-    },
-    {
-      category: 'Anime',
-      color: 'rgb(255,193,25)',
-      key: 'go',
-      name: 'Gogoanime',
-      search: '/search.html?keyword={}',
-      url: 'https://gogoanime.vc/',
-    },
+    //#endregion
+    //#region Watch
     {
       category: 'Watch',
       hues: ['5', '355'],
@@ -131,6 +96,48 @@ const CONFIG = {
       search: '/find?q={}&ref_=nv_sr_sm',
       url: 'https://www.imdb.com/',
     },
+    //#endregion
+    //#region Coding
+    {
+      category: 'Coding',
+      color: 'rgb(205,217,229)',
+      key: 'git',
+      name: 'GitHub',
+      search: '/search?q={}',
+      url: 'https://github.com',
+    },
+    {
+      category: 'Coding',
+      color: '#303133',
+      key: 'phind',
+      name: 'phind',
+      search: '/search?q={}',
+      url: 'https://www.phind.com/',
+    },
+    {
+      category: 'Coding',
+      color: 'rgb(53, 55, 83)',
+      key: 'st',
+      name: 'Speedtest',
+      url: 'https://www.speedtest.net/',
+    },
+    {
+      category: 'Coding',
+      color: '#003756',
+      key: 're',
+      name: 'Recidex',
+      url: 'https://recidex.yotamgolan.com/',
+    },
+    {
+      category: 'Coding',
+      color: 'rgb(114,137,218)',
+      key: 'pm',
+      name: 'Playman',
+      search: '/?query={}',
+      url: 'https://playman.amitgold.com/',
+    },
+    //#endregion
+    //#region VPS/DNS
     {
       category: 'VPS/DNS',
       color: 'rgb(199,70,52)',
@@ -152,6 +159,8 @@ const CONFIG = {
       name: 'ClouDNS',
       url: 'https://www.cloudns.net/',
     },
+    //#endregion
+    //#region Torrents
     {
       category: 'Torrents',
       hues: ['166', '146'],
@@ -175,11 +184,14 @@ const CONFIG = {
     },
     {
       category: 'Torrents',
-      hues: ['198', '218'],
-      key: 'rbg',
-      name: 'Rarbg',
-      url: 'https://rarbgtor.org/torrents.php',
+      color: 'rgb(106, 192, 69)',
+      key: 'yts',
+      name: 'YTS',
+      search: '/browse-movies/{}',
+      url: 'https://yts.mx/',
     },
+    //#endregion
+    //#region Media
     {
       category: 'Media',
       color: 'rgb(255,69,0)',
@@ -203,36 +215,26 @@ const CONFIG = {
       name: 'Ynet',
       url: 'https://www.ynet.co.il/home/0,7340,L-8,00.html',
     },
+    //#endregion
+    //#region Anime
     {
-      category: 'Miscellaneous',
-      color: 'rgb(205,217,229)',
-      key: 'git',
-      name: 'GitHub',
-      search: '/search?q={}',
-      url: 'https://github.com',
+      category: 'Anime',
+      color: 'rgb(46,81,162)',
+      key: 'mal',
+      name: 'MyAnimeList',
+      search: '/search/all?q={}&cat=all',
+      url: 'https://myanimelist.net/',
     },
     {
-      category: 'Miscellaneous',
-      color: 'rgb(53, 55, 83)',
-      key: 'st',
-      name: 'Speedtest',
-      url: 'https://www.speedtest.net/',
+      category: 'Anime',
+      color: 'rgb(255,193,25)',
+      key: 'go',
+      name: 'Gogoanime',
+      search: '/search.html?keyword={}',
+      url: 'https://gogoanime.vc/',
     },
-    {
-      category: 'Miscellaneous',
-      color: '#003756',
-      key: 're',
-      name: 'Recidex',
-      url: 'https://recidex.yotamgolan.com/',
-    },
-    {
-      category: 'Miscellaneous',
-      color: 'rgb(114,137,218)',
-      key: 'pm',
-      name: 'Playman',
-      search: '/?query={}',
-      url: 'https://playman.amitgold.com/',
-    },
+    //#endregion
+    //#region Shopping
     {
       category: 'Shopping',
       color: '#E73208',
@@ -249,6 +251,18 @@ const CONFIG = {
       search: '/s?k={}',
       url: 'https://www.amazon.com/',
     },
+    //#endregion
+    //#region Gaming
+    {
+      category: 'Gaming',
+      hues: ['4', '24'],
+      key: 'aks',
+      name: 'AllKeyShop',
+      search: '/catalogue/search-{}/',
+      url: 'https://www.allkeyshop.com/blog/',
+    },
+    //#endregion
+    //#region Learn
     {
       category: 'Learn',
       color: '#0056D2',
@@ -256,6 +270,8 @@ const CONFIG = {
       name: 'Coursera',
       url: 'https://www.coursera.org/',
     },
+    //#endregion
+    //#region Social
     {
       category: 'Social',
       color: 'rgb(12,194,67)',
@@ -263,6 +279,8 @@ const CONFIG = {
       name: 'Whatsapp',
       url: 'https://web.whatsapp.com/',
     },
+    //#endregion
+    //#region Security
     {
       category: 'Security',
       color: 'rgb(23,93,220)',
@@ -270,6 +288,7 @@ const CONFIG = {
       name: 'Bitwarden',
       url: 'https://vault.bitwarden.com/#/',
     },
+    //#endregion
   ],
 
   // Instantly redirect when a key is matched. Put a space before any other
