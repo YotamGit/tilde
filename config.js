@@ -71,6 +71,13 @@ const CONFIG = {
       search: '/calendar/u/0/r/search?q={}',
       url: 'https://calendar.google.com/calendar/u/0/r',
     },
+    {
+      category: 'Google',
+      hues: ['136', '156'],
+      key: 'map',
+      name: 'Maps',
+      url: 'https://www.google.com/maps',
+    },
     //#endregion
     //#region Watch
     {
@@ -251,6 +258,14 @@ const CONFIG = {
       search: '/s?k={}',
       url: 'https://www.amazon.com/',
     },
+    {
+      category: 'Shopping',
+      color: 'rgb(2, 63, 94)',
+      key: 'zap',
+      name: 'Zap',
+      search: '/search.aspx?keyword={}',
+      url: 'https://www.zap.co.il',
+    },
     //#endregion
     //#region Gaming
     {
@@ -270,6 +285,13 @@ const CONFIG = {
       name: 'Coursera',
       url: 'https://www.coursera.org/',
     },
+    {
+      category: 'Learn',
+      color: 'rgba(245, 197, 24, 1)',
+      key: 'nt',
+      name: 'Notion',
+      url: 'https://www.notion.so',
+    },
     //#endregion
     //#region Social
     {
@@ -287,6 +309,22 @@ const CONFIG = {
       key: 'bw',
       name: 'Bitwarden',
       url: 'https://vault.bitwarden.com/#/',
+    },
+    //#endregion
+    //#region AI
+    {
+      category: 'AI',
+      color: 'rgb(26, 182, 143)',
+      key: 'gpt',
+      name: 'ChatGPT',
+      url: 'https://chatgpt.com/',
+    },
+    {
+      category: 'AI',
+      color: 'rgb(54, 142, 211)',
+      key: 'gmn',
+      name: 'Gemini',
+      url: 'https://gemini.google.com/app',
     },
     //#endregion
   ],
